@@ -1,6 +1,6 @@
 '''
 Simple Linear Regression:
-    - We will use scikit-lerarn to implement simple linear regression
+    - We will use scikit-learn to implement simple linear regression
     - Also, we will creater a model, train it and use the model
 '''
 
@@ -24,7 +24,6 @@ path= 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud'\
 #open('Regression/FuelConsumptionCO2.csv', 'wb').write(r.content)
 
 df = pd.read_csv('Regression/FuelConsumptionCO2.csv')
-df.head()
 #display(df.head())
 #display(df.describe())
 
@@ -63,8 +62,6 @@ test = cdf[~msk]
 # LINEAR REGRESSION WITH ENGINESIZE AGAINST CO2EMISSIONS
 print('###### SIMPLE LINEAR REGRESSION ######\nEngine Size against CO2' \
        'Emissions')
-
-
 regr = linear_model.LinearRegression()
 train_x = np.asanyarray(train[['ENGINESIZE']])
 train_y = np.asanyarray(train[['CO2EMISSIONS']])
